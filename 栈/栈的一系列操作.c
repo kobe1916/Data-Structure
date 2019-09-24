@@ -8,3 +8,9 @@ SeqStack * InitStack()
   return s;
 }
 
+//判空栈
+int Empty(SeqStack * s)
+{
+  if(s->top == -1) return 1;
+  else return 0;
+}
