@@ -21,3 +21,66 @@
 样例输出 Copy
 (2,4,75)(2,6,75)(3,4,75)(3,6,75) 
 */
+/*
+#define _CRT_SECURE_NO_WARNINGS 1
+#define N 10
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node {
+	int row;
+	int col;
+	int data;
+} node;
+
+int main()
+{
+	node ad[50];
+	int arr[N][N] = { 0 };
+	int i, j;
+	int m, n;
+	int m1, n1,n11, q=0;
+	int min, max;
+	scanf("%d", &i);
+	scanf("%d", &j);
+	for (m = 0; m < i; m++)
+	{
+		for (n = 0; n < j; n++)
+		{
+			scanf("%d", &arr[m][n]);
+		}
+	}
+
+	for (m = 0; m < i; m++)
+	{
+		min = arr[m][0], n1 = 0;
+		for (n = 0; n < j; n++)
+		{
+			if (arr[m][n] < min)
+			{
+				min = arr[m][n];
+				n1 = n;
+			}
+		}
+		max = arr[m][n1];
+		for (m1 = 0; m1 < i; m1++)
+		{
+			if (arr[m1][n1] >= max)
+			{
+				max = arr[m1][n1];
+				n11 = m1;
+			}
+		}
+		if (max == min)
+		{
+			ad[q].col = n1;
+			ad[q].row = n11;
+			ad[q].data = max;
+			printf("(%d %d %d)", ad[q].row + 1, ad[q].col + 1, ad[q].data);
+			q++;
+		}
+	}
+	system("pause");
+	return 0;
+}
+*/
