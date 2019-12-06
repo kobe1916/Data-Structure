@@ -30,6 +30,7 @@ int LocateVex(AdjMatrix* G, char v)
 	}
 	return 0;
 }
+
 void Create(AdjMatrix *G)
 {
 	int i, j, k;
